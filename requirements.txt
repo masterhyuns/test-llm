@@ -1,0 +1,39 @@
+# FastAPI & Server (Python 3.13 compatible)
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+gunicorn==23.0.0
+python-multipart==0.0.20
+
+# Pydantic (Python 3.13 compatible)
+pydantic==2.10.3
+pydantic-settings==2.6.1
+
+# AI/LLM (Python 3.13 compatible)
+openai==1.57.2
+langchain==0.3.13
+langchain-openai==0.2.12
+tiktoken==0.8.0
+
+# Database & Cache (Python 3.13 compatible)
+redis==5.2.1
+motor==3.6.0  # MongoDB async driver
+opensearch-py==2.7.1  # OpenSearch client (Vector database + Full-text search)
+
+# Utilities (Python 3.13 compatible)
+python-dotenv==1.0.1
+python-jose[cryptography]==3.3.0  # JWT
+httpx==0.28.1  # Async HTTP client
+aiofiles==24.1.0
+requests==2.32.3  # HTTP client for testing
+
+# Logging & Monitoring (Python 3.13 compatible)
+structlog==24.4.0
+python-json-logger==3.2.1
+
+# Development (Python 3.13 compatible)
+pytest==8.3.4
+pytest-asyncio==0.24.0
+pytest-cov==6.0.0
+black==24.10.0
+ruff==0.8.4
+mypy==1.13.0

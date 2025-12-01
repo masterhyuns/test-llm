@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: qdrant
+    restart: unless-stopped
+    ports:
+      - "6333:6333"  # REST API
+      - "6334:6334"  # gRPC API
+    volumes:
+      - ./qdrant_storage:/qdrant/storage  # 데이터 영구 저장
+      - ./qdrant_snapshots:/qdrant/snapshots  # 백업용
+    environment:
+      # 로그 레벨
+      - QDRANT__LOG_LEVEL=INFO
+      # 서비스 설정
+      - QDRANT__SERVICE__HTTP_PORT=6333
+      - QDRANT__SERVICE__GRPC_PORT=6334
+    networks:
+      - qdrant-network
+
+networks:
+  qdrant-network:
+    driver: bridge
